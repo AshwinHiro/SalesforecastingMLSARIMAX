@@ -1,0 +1,42 @@
+<div class="loginSection">
+    <div class="loginBanner">
+        <img src="assets/login.jpg" alt="login" />
+    </div>      
+    <div class="loginPage">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Login</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="example-form" [formGroup]="loginValidator" (ngSubmit)="login()">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput formControlName="email" placeholder="abc@gmail.com">
+                        <mat-error *ngIf="loginValidator.controls['email']?.errors?.['email']">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="loginValidator.controls['email']?.errors?.['required']">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password" placeholder="Password">
+                        <mat-error *ngIf="loginValidator.controls['password']?.errors?.['required']">
+                        Passoword is required
+                        </mat-error>
+                    </mat-form-field>
+                    
+            
+                    <mat-card-actions>
+                        <button mat-button >Submit</button>
+                    </mat-card-actions>
+                </form>
+            </mat-card-content>
+            <mat-card-content align="end">
+                <p>Not an existing user? <a href="register">Register Now</a></p>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>

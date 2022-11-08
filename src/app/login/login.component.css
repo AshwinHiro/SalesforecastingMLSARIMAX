@@ -1,0 +1,121 @@
+.loginSection {
+    display: grid;
+    /* justify-content: center;
+    align-items: center; */
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: column;
+    position: relative;
+    background-color: #89CFF0;
+    z-index: 0;
+}
+
+.loginSection::before {
+    content: " ";
+    top: -30%;
+    left: -30%;
+    position: absolute;
+    background-color: lavender;
+    width: 1250px;
+    height: 1200px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: moveleft 2s ease-in;
+    pointer-events: none;
+}
+
+.loginSection .loginBanner img{
+    width: 100%;
+    animation: movableimage 2s ease-in;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes movableimage {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to{
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+.loginPage{
+    width: 500px;
+    height: 294px;
+    box-shadow: 5px 10px 5px 1px rgba(50,50,50,0.3);
+    border-radius: 5px;
+    animation: fadein 2s linear;
+    position: relative;
+    left: 0px;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.loginPage mat-card {
+    background-color: rgba(255,255,255,0.8);
+}
+
+
+.loginPage mat-card input:-webkit-autofill, 
+.loginPage mat-card input:-webkit-autofill:hover,
+.loginPage mat-card input:-webkit-autofill:focus{
+    border: none;
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0 1000px #deecf2 inset;
+}
+
+.loginPage mat-card-header {
+    justify-content: center;
+}
+
+.loginPage mat-card-actions:last-child{
+    text-align: right;
+    margin-right: 20px;
+}
+
+@keyframes moveleft {
+    from {
+        left: 20%;
+        opacity: 0;
+    }
+    to { left: -30%;
+        opacity: 1  ;
+    }
+}
+
+@keyframes moveright {
+    0% {
+        left: -30%;
+    }
+    20% { left: 8%;
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+
+@keyframes fadein {
+    from { 
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+width: 100%;
+}

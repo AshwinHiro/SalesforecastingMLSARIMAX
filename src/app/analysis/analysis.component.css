@@ -1,0 +1,85 @@
+.analysisSection {
+    padding: 5px 0px;
+}
+
+.analysisSection .analysisTitle {
+    text-align: center;
+    padding: 30px 0px 15px 0px;
+}
+
+.analysisSection .analysisTitle h1 {
+    font-weight: bold;
+    font-size: 40px;
+    color: #0B415A;
+}
+
+.analysisSection{
+    background-color: #89CFF0;
+    min-height: 100vh;
+    max-height: auto;
+}
+
+.analysisSection .analysisNavigation {
+    background-color: rgba(56, 174, 230, 0.5);
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.analysisSection .analysisView {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.analysisSection .analysisView img {
+    padding: 20px 0px ;
+    width: 800px;
+    height: 500px;
+}
+
+
+.analysisSection .analysisView div p:first-child {
+    font-weight: bold;
+}
+
+.analysisSection .analysisView div p:last-child {
+    width: 300px;
+    word-wrap: break-word;
+    height: 300px;
+    overflow-y: scroll;
+    border: 3px solid #38AEE6;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.analysisSection .analysisTable {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.analysisSection .analysisTable table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.analysisSection .analysisTable td,.analysisSection .analysisTable th {
+    border: 1px solid #167CAC;
+    text-align: left;
+    padding: 8px;
+}
+
+.analysisSection .analysisTable tr:nth-child(even) {
+    background-color: #89CFF0;
+}
+
+.analysisSection .analysisTable tr:nth-child(odd) {
+    background-color: #38AEE6;
+}
+
+.analysisSection .anaylsisExport {
+    text-align: center;
+}

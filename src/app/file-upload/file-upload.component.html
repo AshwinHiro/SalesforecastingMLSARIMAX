@@ -1,0 +1,28 @@
+<div class="uploadSection">
+    <div class="uploadBanner">
+        <img src="assets/upload.jpg" />
+    </div>
+    <div class="uploadDialog">
+        <mat-card align="center">
+            <mat-card-title>Upload A Dataset</mat-card-title>
+            <mat-form-field class="example-form-field" appearance="fill">
+                <mat-label>{{uploadStatus}}</mat-label>
+                <input matInput type="text" [(ngModel)]="filename" disabled>
+                <input [hidden]="true" type="file" (change)="fileUpload($event)" accept=".csv" #fileSelect>
+                <mat-icon matSuffix mat-icon-button (click)="fileSelect.click();">file_upload</mat-icon>
+            </mat-form-field>&nbsp;&nbsp;&nbsp;
+            <mat-form-field appearance="fill">
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="noOfYears">
+                  <mat-option value="0">0</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                </mat-select>
+              </mat-form-field>    
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="onSubmit()">UPLOAD</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

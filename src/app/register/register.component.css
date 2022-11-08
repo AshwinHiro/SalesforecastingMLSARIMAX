@@ -1,0 +1,117 @@
+.registerSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    grid-auto-flow: column;
+    background-color: #89CFF0;
+    position: relative;
+}
+
+.registerSection::before {
+    content: " ";
+    top: -30%;
+    right: -30%;
+    position: absolute;
+    background-color: lavender;
+    width: 1250px;
+    height: 1200px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: moveright 2s ease-in;
+    pointer-events: none;
+}
+
+.registerSection .registerBanner img{
+    width: 100%;
+    animation: movableimage 2s ease-in;
+    position: relative;
+    z-index: 2;
+}
+
+
+@keyframes movableimage {
+    from {
+        right: -100%;
+        opacity: 0;
+    }
+    to{
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+
+.registerPage{
+    width: 500px;
+    box-shadow: 5px 10px 5px 1px rgba(50,50,50,0.3);
+    border-radius: 5px;
+    animation: fadein 2s linear;
+    opacity: 0;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.registerPage mat-card input:-webkit-autofill, 
+.registerPage mat-card input:-webkit-autofill:hover,
+.registerPage mat-card input:-webkit-autofill:focus{
+    border: none;
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0 1000px #f5f5f5 inset;
+}
+
+
+
+.registerPage mat-card-header {
+    justify-content: center;
+}
+
+.registerPage mat-card-actions:last-child{
+    text-align: right;
+    margin-right: 20px;
+}
+
+
+@keyframes moveright {
+    from {
+        right: 20%;
+        opacity: 0;
+    }
+    to { right: -30%;
+        opacity: 1  ;
+    }
+}
+
+@keyframes moveleft {
+    0% {
+        left: -30%;
+    }
+    20% { left: 8%;
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+
+@keyframes fadein {
+    from { 
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+width: 100%;
+}
