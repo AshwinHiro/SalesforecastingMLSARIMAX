@@ -22,9 +22,9 @@ const routes: Routes = [
   {
     path: "analysis" , component: AnalysisComponent
   },
-  { 
-    path: '**', pathMatch: 'full', component: PageNotFoundComponent 
-  }
+  // { 
+  //   path: '**', pathMatch: 'full', component: PageNotFoundComponent 
+  // }
 ];
 
 @NgModule({
